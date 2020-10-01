@@ -71,8 +71,7 @@ main {
     cursor: pointer;
     display: block;
     margin: 0 auto;
-    margin-top: 3rem;
-    padding: 0.6rem;
+    padding: 10px 16px;
 }
   
 .btn:hover,
@@ -85,9 +84,21 @@ main {
     to   { opacity: 1; }
 }
 
+.btn-wrapper, .select-wrapper{
+    display: inline-block;
+}
+
+.wrapper{
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 4.5rem;
+}
+
 /* The container must be positioned relative: */
 .custom-select {
-    margin-top: 80px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -149,3 +160,38 @@ main {
 .select-items div:hover, .same-as-selected {
     background-color: rgba(0, 0, 0, 0.1);
 } 
+
+.errorBox{
+    background-color: #db564c;
+    color: #FFF;
+    border-radius: 5px;
+    height: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    animation: fadein 1s;
+    position: absolute;
+    width: 40%;
+}
+
+.information{
+    background: #1c1c1c;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 5rem;
+    animation: fadein 1s;
+}
+
+.ul-info{
+    list-style-type: none;
+}
+
+.flag{
+    width: 300px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}

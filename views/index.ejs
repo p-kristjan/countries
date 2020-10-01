@@ -12,22 +12,44 @@
     </header>
 
     <main>
-        <form class="form" method="POST">
-            <div class="custom-select" style="width:200px;">
-                <select name="countries" id="countries">
-                    <option value="0">Select country:</option>
-                    <option value="1">Estonia</option>
-                    <option value="2">Latvia</option>
-                    <option value="3">Lithuania</option>
-                </select>
-            </div>
-
-            <button class="btn" type="submit">get information</button>
-        </form>
-
-        <% if(country.length > 0) {%>
-            
+        <% if(errorMessage.length > 0) {%>
+            <div class="errorBox"><p class="errorMsg"><%= errorMessage %></p></div> 
         <% } %>
+
+        <form class="form" method="POST">
+            <div class="wrapper">
+                <div class="select-wrapper">
+                    <div class="custom-select" style="width:200px;">
+                        <select name="countries" id="countries">
+                            <option value="0">Select country:</option>
+                            <option value="1">Estonia</option>
+                            <option value="2">Latvia</option>
+                            <option value="3">Lithuania</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="btn-wrapper">
+                    <button class="btn" type="submit">get information</button>
+                </div>
+            </div>
+            <% if(country.length > 0 && country != "error") {%>
+            <div class="information">
+                <img src=<%= flag %> alt="" class="flag">
+                <ul class="ul-info">
+                    <li><%= name %></li>
+                    <li>Top level domain: <%= topLevelDomain %></li>
+                    <li>Calling code: <%= callingCode %></li>
+                    <li>Capital: <%= capital %></li>
+                    <li>Region: <%= region %></li>
+                    <li>Subregion: <%= subRegion %></li>
+                    <li>Population: <%= population %></li>
+                    <li>Timezone: <%= timezone %></li>
+                    <li>Language: <%= language %></li>
+                    <li>Currency: <%= currency %></li>
+                </ul>
+            </div>
+            <% } %>
+        </form>
     </main>
 
     <script>
