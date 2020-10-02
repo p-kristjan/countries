@@ -8,7 +8,8 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #2f3136;
+    background-image: url('/img/map.jpg');
+    background-size: 100%;
     color: #dcddde;
 }
 
@@ -21,7 +22,7 @@ main {
 .main-header {
     width: 100%;
     height: 4rem;
-    background-color: #202225;
+    background-color: #00000080;
     padding: 0 2rem;
     display: flex;
     align-items: center;
@@ -63,8 +64,8 @@ main {
 .btn {
     font: inherit;
     border: none;
-    color: #41444b;
-    background: #b9bbbe;
+    color: #fff;
+    background: rgb(23, 137, 226);
     border-radius: 5px;
     font-weight: 700;
     font-size: 1rem;
@@ -72,11 +73,12 @@ main {
     display: block;
     margin: 0 auto;
     padding: 10px 16px;
+    transition: 0.3s;
 }
   
 .btn:hover,
 .btn:active {
-    background-color: #FFF;
+    background: rgb(23, 155, 255);
 }
 
 @keyframes fadein {
@@ -102,7 +104,6 @@ main {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    color: #41444b;
 }
 
 .custom-select select {
@@ -110,7 +111,7 @@ main {
 }
 
 .select-selected {
-    background-color: #d4d4d2;
+    background-color: #fff;
     border-radius: 5px;
 }
 
@@ -144,7 +145,7 @@ main {
 /* Style items (options): */
 .select-items {
     position: absolute;
-    background-color: #d4d4d2;
+    background-color: #fff;
     top: 100%;
     left: 0;
     right: 0;
@@ -177,21 +178,39 @@ main {
 }
 
 .information{
-    background: #1c1c1c;
-    border: 1px solid black;
     border-radius: 5px;
     padding: 1rem;
-    margin-top: 5rem;
     animation: fadein 1s;
+    margin-top: 5rem;
+    position: relative;
+    background-color: #00000080;
+    color: #fff;
+    z-index: -1;
 }
 
-.ul-info{
+.table-info{
     list-style-type: none;
+    border: none;
+    margin: 0 auto;
+    margin-top: 1rem;
+    font-size: 1.15rem;
+}
+
+.table-info td{
+    padding: 3px 15px;
 }
 
 .flag{
-    width: 300px;
+    width: 210px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.countryName{
+    text-align: center;
+}
+
+ul {
+    float: left;
 }

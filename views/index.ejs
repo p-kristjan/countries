@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countries</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <header class="main-header">
-        <h1>#countries</h1>
+        <h1>countries</h1>
     </header>
 
     <main>
@@ -35,18 +36,28 @@
             <% if(country.length > 0 && country != "error") {%>
             <div class="information">
                 <img src=<%= flag %> alt="" class="flag">
-                <ul class="ul-info">
-                    <li><%= name %></li>
-                    <li>Top level domain: <%= topLevelDomain %></li>
-                    <li>Calling code: <%= callingCode %></li>
-                    <li>Capital: <%= capital %></li>
-                    <li>Region: <%= region %></li>
-                    <li>Subregion: <%= subRegion %></li>
-                    <li>Population: <%= population %></li>
-                    <li>Timezone: <%= timezone %></li>
-                    <li>Language: <%= language %></li>
-                    <li>Currency: <%= currency %></li>
-                </ul>
+                <h1 class="countryName"><%= name %></h1>
+                <table class="table-info">
+                    <tr>
+                        <td><li>Top level domain: <strong><%= topLevelDomain %></strong></li></td>
+                        <td><li>Population: <strong><%= population %></strong></li></td>
+                    </tr>
+                    <tr>
+                        <td><li>Calling code: <strong><%= callingCode %></strong></li></td>
+                        <td><li>Timezone: <strong><%= timezone %></strong></li></td>
+                    </tr>
+                    <tr>
+                        <td><li>Capital: <strong><%= capital %></strong></li></td>
+                        <td><li>Language: <strong><%= language %></strong></li></td>
+                    </tr>
+                    <tr>
+                        <td><li>Region: <strong><%= region %></strong></li></td>
+                        <td><li>Currency: <strong><%= currency %></strong></li></td>
+                    </tr>
+                    <tr>
+                        <td><li>Subregion: <strong><%= subRegion %></strong></li></td>
+                    </tr>
+                </table>
             </div>
             <% } %>
         </form>
