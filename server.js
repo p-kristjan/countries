@@ -97,6 +97,6 @@ app.post('/', (req, res) => {
 
 let port = 4477;
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log('Server is running on port: ' + port);
 });
